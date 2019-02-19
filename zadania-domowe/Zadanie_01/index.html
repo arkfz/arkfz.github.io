@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML - Zadanie 1 - Formularz</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <form action="https://formspree.io/arkadiusz.fuz@gmail.com" method="POST">
+        <h1>Zgłoszenie</h1>
+        <label>Imię</label>
+        <input type="text" name="name" placeholder="Podaj imię" required>
+        <label>Nazwisko</label>
+        <input type="text" name="surname" placeholder="Podaj nazwisko" required>
+        <label>Mail</label>
+        <input type="email" name="mail" placeholder="Podaj adres" required>
+        <label>Telefon</label>
+        <input type="number" name="number" placeholder="Podaj numer" required>
+        <label>Miejscowość</label>
+        <select name="city">
+            <option value="Warszawa" selected>Warszawa</option>
+            <option value="Gdańsk">Gdańsk</option>
+            <option value="Kraków">Kraków</option>
+        </select>
+        <br>
+        <br>
+        <label>Płeć</label>
+        <label class="wybor"><input type="radio" name="gender" value="Mężczyzna" required>Mężczyzna</label>
+        <label class="wybor"><input type="radio" name="gender">Kobieta</label>
+        <br>
+        <label>Oświadczenie</label>
+        <label class="wybor"><input type="checkbox" name="agreement" required>Wyrażam zgodę na przetwarzanie danych osobowych.</label>
+        <br>
+        <label>Wiadomość</label>
+        <textarea  name="message" placeholder="Napisz kilka słów o sobie." required></textarea>
+        <br>
+        <div>
+        <input type="submit" value="Wyślij">
+        </div>
+    </form>
+</body>
+
+</html>
