@@ -67,8 +67,9 @@ textarea {
     width: 230px;
     border: none;
     height: 30px;
-    cursor: pointer;   
+    cursor: pointer;
 }
 [type="submit"]:hover {
     background-color: green;
+    transition: 1s linear 500ms;
 }
