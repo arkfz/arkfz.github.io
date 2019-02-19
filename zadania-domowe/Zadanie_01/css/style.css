@@ -71,3 +71,9 @@ textarea {
     background-color: green;
     transition: 1s linear 500ms;
 }
+p {
+    margin-left: 10px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    font-weight: bold;
+}
