@@ -12,34 +12,45 @@
 <body>
     <form action="https://formspree.io/arkadiusz.fuz@gmail.com" method="POST">
         <h1>Zgłoszenie</h1>
-        <label>Imię</label>
-        <input type="text" name="name" placeholder="Podaj imię" required>
-        <label>Nazwisko</label>
-        <input type="text" name="surname" placeholder="Podaj nazwisko" required>
-        <label>Mail</label>
-        <input type="email" name="mail" placeholder="Podaj adres" required>
-        <label>Telefon</label>
-        <input type="number" name="number" placeholder="Podaj numer" required>
-        <label>Miejscowość</label>
-        <select name="city">
-            <option value="Warszawa" selected>Warszawa</option>
-            <option value="Gdańsk">Gdańsk</option>
-            <option value="Kraków">Kraków</option>
-        </select>
-        <br>
+        <label>Imię
+            <input type="text" name="name" placeholder="Podaj imię" required>
+        </label>
+        <label>Nazwisko
+            <input type="text" name="surname" placeholder="Podaj nazwisko" required>
+        </label>
+        <label>Mail
+            <input type="email" name="mail" placeholder="Podaj adres" required>
+        </label>
+        <label>Telefon
+            <input type="number" name="number" placeholder="Podaj numer" required>
+        </label>
+        <label>Miejscowość
+            <select name="city">
+                <option value="Warszawa" selected>Warszawa</option>
+                <option value="Gdańsk">Gdańsk</option>
+                <option value="Kraków">Kraków</option>
+            </select>
+        </label>
         <br>
         <label>Płeć</label>
-        <label class="wybor"><input type="radio" name="gender" value="Mężczyzna" required>Mężczyzna</label>
-        <label class="wybor"><input type="radio" name="gender">Kobieta</label>
+        <label class="wybor">
+            <input type="radio" name="gender" value="Mężczyzna" required>Mężczyzna
+        </label>
+        <label class="wybor">
+            <input type="radio" name="gender">Kobieta
+        </label>
         <br>
         <label>Oświadczenie</label>
-        <label class="wybor"><input type="checkbox" name="agreement" required>Wyrażam zgodę na przetwarzanie danych osobowych.</label>
+        <label class="wybor">
+            <input type="checkbox" name="agreement" required>Wyrażam zgodę na przetwarzanie danych osobowych.
+        </label>
         <br>
-        <label>Wiadomość</label>
-        <textarea  name="message" placeholder="Napisz kilka słów o sobie." required></textarea>
+        <label>Wiadomość
+            <textarea name="message" placeholder="Napisz kilka słów o sobie." required></textarea>
+        </label>
         <br>
         <div>
-        <input type="submit" value="Wyślij">
+            <input type="submit" value="Wyślij">
         </div>
     </form>
 </body>
