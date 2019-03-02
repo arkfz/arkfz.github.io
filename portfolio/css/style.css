@@ -1,153 +1,86 @@
-/* Navigation Styles */
-
 * {
-    box-sizing: border-box; /*Uzywajac paddingow, aby nie zmienialy sie szerokosci elementow*/
+    box-sizing: border-box;
+    font-family: 'Open Sans'
 }
-body {
-    font-family: 'Open Sans', sans0serif;
-    color: #777;
+h1 {
+    color: rgb(56, 54, 54);
+    font-size: 4em;
+    text-transform: uppercase;
+    margin: 0;
 }
-/* Rozpisac mozna elementy, zeby pozniej moc kazdy stylowac. Nawet jak nie bede go stylowac, mozna tak zaczac. */
-header.main-header {
-    background-image: url(https://raw.githubusercontent.com/arkfz/arkfz.github.io/master/portfolio/img/header.jpg);
-    height: 90vh;
+hr {
+    background-color: rgb(78, 196, 78);
+    border: 0;
+    height: 2px;
+    width: 20vh;
+}
+a.button {
+    border: 1px solid rgb(78, 196, 78);
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: auto;
+    color: grey;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: all 0.1s;
+    background-color: transparent;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: rgb(78, 196, 78);
+    color: white;
+}
+header.first {
+    background-image: url(../img/header.jpg);
     background-size: cover;
     background-position: center;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    z-index: 100;
 }
-
-div.main-header {
-    
-}
-.foto {
-    
-    
-}
-.profilowe {
-    border-radius: 50%;
-    text-align: center;
-    margin: 30px;
-    
-  
-    
-  
-  
-    
-}
-
-
-h1 {
-    font-size: 4em;
-    text-transform: uppercase;
-    margin: 0;
-    color: #007bff;
-}
-h2 {
-    margin-top: 50px;
-    font-size: 2em;
-    text-transform: uppercase;
+header.first div.main-header p {
     color: grey;
-    text-align: center;
+    font-size: 1.5em;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
 }
-hr {
-    background-color: #007bff;
-    border: 0.25px solid #007bff;
-    height: 1px;
-    width: 200px;
+header.first div.main-header p span {
+    color: rgb(78, 196, 78);
+    margin: 1vh;
 }
-/*  background-color: blue;
-    border: 0;
-    height: 1px;
-    width: 70px;
-    */
-p {
-    font-size: 1.3em;
-    margin: 40px;
-    text-align: center;
-}
-p.footer {
-    font-size: 1em;
-    text-align: center;
-
-
-}
-.forbutton {
-    text-align: center;
-}
-.button {
-    text-decoration: none;
-    text-transform: uppercase;
-    background-color: rgba (0 0 0 0);
-    border: 1px solid #007bff;
-    padding: 15px;
-    margin: 15px;
-    color: #007bff;
-    text-align: center;
-}
-.button:hover {
-    background-color: #007bff;
-    transition: 0s linear 0s;
-    color: white;
-}
-
-#menu {
+nav.menu {
+    background-color: rgb(78, 196, 78);
+    height: 10vh;
     position: sticky;
     top: 0;
-    background-color: #007bff;
-    height: 10vh;
-}
-ul {
-    text-align: center;
-    height: 100%;
-    margin: 0;
-}
-.menu-item {
-    display: inline-block;
-    height: 100%;
-
-}
-
-
-
-.menu .nav .menu-item a{
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: all 0.5s;
-    padding: 15px 20px;
-    display: block;
-    line-height: 10vh;
-}
-
-.menu .nav .menu-item a:hover {
-    background-color: white;
-    color: #007bff;
-    cursor: pointer;
-}
-
-.portfolio .portfolio2 {
-    background-color: #f2f1ed;
-   
-        display: flex;
-        flex-basis: 25%;
-        flex-direction:row;
-        flex-wrap: wrap;
-        justify-content: center;
-        }
-        
-
-/*
-.portfolio .portfolio {
+    z-index: 100;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+    justify-content: center;
+    align-items: center;
 
-.portfolio .portfolio .img {
 }
-
-*/
+nav.menu label, input {
+	display: none;
+}
+nav.menu ul.nav li.menu-item {
+    display: inline-block;
+}
+nav.menu ul.nav li.menu-item a {
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 300;
+    color: white;
+    text-transform: uppercase;
+    margin: 15px;
+    padding: 20px;
+    display: inline-block;
+}
+nav.menu ul.nav li.menu-item a:hover {
+	background-color: #fff;
+	color: rgb(78, 196, 78);
+}
+section {
+    padding: 120px 0;
+}

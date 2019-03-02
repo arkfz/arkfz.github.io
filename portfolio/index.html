@@ -7,180 +7,136 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,400i,600,800&amp;subset=latin-ext">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <title>Arkadiusz Fuz</title>
+    <title>AF - Portfolio</title>
 </head>
 
 <body>
-    <header class="main-header">
+    <header class="first">
         <div class="main-header">
-            <h1>front end developer</h1>
+            <h1>frontend developer</h1>
             <hr>
-            <p>HTML <span class="title">&diams;</span> CSS <span class="title">&diams;</span> JavaScript</p>
-            <a class="button" href="#about">Dowiedz się więcej</a>
+            <p>HTML<span>&#9642;</span>CSS<span>&#9642;</span>JavaScript</p>
+            <a class="button" href="#about">dowiedz się więcej</a>
         </div>
     </header>
-    <nav class="menu" id="menu">
+    <nav class="menu">
+        <label for="drop-nav">Menu</label>
+        <input type="checkbox" id="drop-nav">
         <ul class="nav">
             <li class="menu-item"><a class="menu1" href="#about">o mnie</a></li>
             <li class="menu-item"><a class="menu2" href="#portfolio">portfolio</a></li>
             <li class="menu-item"><a class="menu3" href="#contact">kontakt</a></li>
         </ul>
     </nav>
-    <section id="about">
-        <header>
+    <section id="about" class="aboutme">
+        <header class="subpage">
             <h2>o mnie</h2>
             <hr>
         </header>
-        <div class="foto">
-        <div class="profilowe">
-            <img class="profilowe"
-                src="https://raw.githubusercontent.com/arkfz/arkfz.github.io/master/portfolio/img/about.jpg"
-                alt="MOJE ZDJĘCIE">
+        <div class="profilephoto" id="profilephoto">
+            <img src="img/me.png" alt="Zdjęcie">
         </div>
+        <div class="textabout">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odio dolores sequi, laborum, nulla
+                soluta id vero voluptates repudiandae ipsum sint commodi distinctio consequatur, labore magnam autem ea
+                numquam possimus deleniti iste ducimus enim quibusdam maxime corporis. Numquam voluptates minus nemo,
+                aliquid excepturi beatae eius ipsa? Adipisci quia dolor, quam deserunt possimus perferendis sequi?
+                Maiores aspernatur facere corporis possimus quas perspiciatis reprehenderit nulla.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, fugit obcaecati reiciendis cum debitis a
+                possimus non, veritatis ad quo alias modi. Quidem, ipsum similique repudiandae saepe unde harum ex, sit
+                doloribus enim eveniet praesentium vel temporibus distinctio a at? Magnam repudiandae facere tenetur
+                unde expedita saepe dignissimos delectus maxime.</p>
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus illo magnam dicta quasi, doloribus
-            exercitationem neque dolore animi laborum inventore nemo dolor, facilis cupiditate laboriosam at nihil sit,
-            ipsum obcaecati quia adipisci alias fugiat a error explicabo. Cupiditate aspernatur autem iste error est
-            assumenda qui soluta facilis architecto reicien.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iusto recusandae optio aliquid sequi. Incidunt
-            consectetur illum iusto aspernatur eius soluta iste aliquam molestias suscipit asperiores inventore,
-            quisquam
-            cumque doloremque neque. Perferendis est voluptatibus nostrum soluta reiciendis commodi laudantium, odio
-            veritatis quibusdam dolorem, impedit beatae officia vero, omnis ab id.</p>
-        <div class="forbutton">        
-            <a class="button" href="#portfolio">Moje Portfolio</a>
-            </div>
+        <div class="button">
+            <a class="button" href="#portfolio">moje portfolio</a>
+        </div>
     </section>
-    <section class="portfolio">
-        <header>
+    <section class="portfolio" id="portfolio">
+        <header class="subpage">
             <h2>portfolio</h2>
             <hr>
         </header>
-        <div class="portfolio2" id="portfolio">
+        <div class="projekty" id="projekty">
             <a class="img" href="#about">
-                <figure>
-                    <img src="https://raw.githubusercontent.com/arkfz/arkfz.github.io/master/portfolio/img/projekty/photo-1.jpg"
-                        alt="No image">
-                    <figcaption>Projekt</figcaption>
-                </figure>
+                <img src="img/projekty/photo-1.jpg" alt="No image">
+                <h3>Projekt 1</h3>
             </a>
             <a class="img" href="#about">
-                <figure>
-                    <img src="https://raw.githubusercontent.com/arkfz/arkfz.github.io/master/portfolio/img/projekty/photo-2.jpg"
-                        alt="No image">
-                    <figcaption>Projekt</figcaption>
-                </figure>
+                <img src="img/projekty/photo-2.jpg" alt="No image">
+                <h3>Projekt 2</h3>
             </a>
             <a class="img" href="#about">
-                <figure>
-                    <img src="https://raw.githubusercontent.com/arkfz/arkfz.github.io/master/portfolio/img/projekty/photo-3.jpg"
-                        alt="No image">
-                    <figcaption>Projekt</figcaption>
-                </figure>
+                <img src="img/projekty/photo-3.jpg" alt="No image">
+                <h3>Projekt 3</h3>
             </a>
             <a class="img" href="#about">
-                <figure>
-                    <img src="https://raw.githubusercontent.com/arkfz/arkfz.github.io/master/portfolio/img/projekty/photo-4.jpg"
-                        alt="No image">
-                    <figcaption>Projekt</figcaption>
-                </figure>
+                <img src="img/projekty/photo-4.jpg" alt="No image">
+                <h3>Projekt 4</h3>
             </a>
             <a class="img" href="#about">
-                <figure>
-                    <img src="https://raw.githubusercontent.com/arkfz/arkfz.github.io/master/portfolio/img/projekty/photo-5.jpg"
-                        alt="No image">
-                    <figcaption>Projekt</figcaption>
-                </figure>
+                <img src="img/projekty/photo-5.jpg" alt="No image">
+                <h3>Projekt 5</h3>
             </a>
             <a class="img" href="#about">
-                <figure>
-                    <img src="https://raw.githubusercontent.com/arkfz/arkfz.github.io/master/portfolio/img/projekty/photo-6.jpg"
-                        alt="No image">
-                    <figcaption>Projekt</figcaption>
-                </figure>
+                <img src="img/projekty/photo-6.jpg" alt="No image">
+                <h3>Projekt 6</h3>
             </a>
             <a class="img" href="#about">
-                <figure>
-                    <img src="https://raw.githubusercontent.com/arkfz/arkfz.github.io/master/portfolio/img/projekty/photo-7.jpg"
-                        alt="No image">
-                    <figcaption>Projekt</figcaption>
-                </figure>
-            </a>
-            <figure>
-                <a class="img" href="#about">
-                    <img src="https://raw.githubusercontent.com/arkfz/arkfz.github.io/master/portfolio/img/projekty/photo-8.jpg"
-                        alt="No image">
-                    <figcaption>Projekt</figcaption>
-            </figure>
-            </a>
-            <figure>
-                <img src="https://raw.githubusercontent.com/arkfz/arkfz.github.io/master/portfolio/img/projekty/photo-9.jpg"
-                    alt="No image">
-                <figcaption>Projekt</figcaption>
-            </figure>
+                <img src="img/projekty/photo-7.jpg" alt="No image">
+                <h3>Projekt 7</h3>
             </a>
             <a class="img" href="#about">
-                <figure>
-                    <img src="https://raw.githubusercontent.com/arkfz/arkfz.github.io/master/portfolio/img/projekty/photo-10.jpg"
-                        alt="No image">
-                    <figcaption>Projekt</figcaption>
-                </figure>
+                <img src="img/projekty/photo-8.jpg" alt="No image">
+                <h3>Projekt 8</h3>
             </a>
             <a class="img" href="#about">
-                <figure>
-                    <img src="https://raw.githubusercontent.com/arkfz/arkfz.github.io/master/portfolio/img/projekty/photo-11.jpg"
-                        alt="No image">
-                    <figcaption>Projekt</figcaption>
-                </figure>
+                <img src="img/projekty/photo-9.jpg" alt="No image">
+                <h3>Projekt 9</h3>
             </a>
             <a class="img" href="#about">
-                <figure>
-                    <img src="https://raw.githubusercontent.com/arkfz/arkfz.github.io/master/portfolio/img/projekty/photo-12.jpg"
-                        alt="No image">
-                    <figcaption>Projekt</figcaption>
-                </figure>
+                <img src="img/projekty/photo-10.jpg" alt="No image">
+                <h3>Projekt 10</h3>
             </a>
-        </div>
+            <a class="img" href="#about">
+                <img src="img/projekty/photo-11.jpg" alt="No image">
+                <h3>Projekt 11</h3>
+            </a>
+            <a class="img" href="#about">
+                <img src="img/projekty/photo-12.jpg" alt="No image">
+                <h3>Projekt 12</h3>
+            </a>
     </section>
-    <section class="contact">
-        <header>
+    <section class="contact" id="contact">
+        <header class="subpage">
             <h2>kontakt</h2>
             <hr>
         </header>
-        <form action="https://formspree.io/arkadiusz.fuz@gmail.com" method="POST">
-            <div class="namemail">
-                <input type="text" name="name" placeholder="Imię" required>
-                <input type="email" name="mail" placeholder="Mail" required>
-            </div>
-            <div class="textarea"><textarea name="message" placeholder="Wiadomość" required></textarea>
-            </div>
-            <br>
-            <div class="forbutton">
-            <input type="submit" value="Wyślij">
-            </div>
-            <br>
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-youtube"></i>
-            <i class="fab fa-github"></i>
+        <div class="form" id="form">
+            <form action="https://formspree.io/arkadiusz.fuz@gmail.com" method="POST">
+                <input type="text" placeholder="Imię" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Wiadomość" required></textarea>
+                <input type="submit" class="btn" value="wyślij wiadomość">
+            </form>
+        </div>
+        <div class="icons" id="icons">
+            <a href="https://www.facebook.com/arek.fuz.9" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/ark.fz/" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/watch?v=QjVnyj8JvmM&list=RDQjVnyj8JvmM&start_radio=1" class="icon"><i
+                    class="fab fa-youtube"></i></a>
+            <a href="https://github.com/arkfz" class="icon"><i class="fab fa-github"></i></a>
+        </div>
     </section>
-
-    <section class="footer">
-        <p class="footer">Copyright Arkadiusz Fuz</p>
-
-
-    </section>
-
-
-
-
-
-
-
+    <footer>
+        <div class="foot">
+            <p>Copyright &#9400; Arkadiusz Fuz</p>
+        </div>
+    </footer>
 </body>
 
 </html>
