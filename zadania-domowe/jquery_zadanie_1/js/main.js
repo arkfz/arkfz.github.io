@@ -30,14 +30,14 @@ $(function () {
             width: '100px',
             height: '100px',
             left: '100px'
-        }, 1000, function () {
+        }, 3000, function () {
             $('div').animate({
                 backgroundColor: 'blue'
-            }, 1000, function () {
+            }, 5000, function () {
                 $('h2').animate({
                     opacity: "1",
                 }, 1250)
             })
         });
     });
-}); 
+});
