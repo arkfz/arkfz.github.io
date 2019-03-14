@@ -12,4 +12,4 @@ function pobierzDane() {
         .catch(error => console.log(error))
 }
 let btn = document.querySelector('button');
-btn.addEventListener('click', pobierzDane);
+btn.addEventListener('click', pobierzDane, {once : true});
