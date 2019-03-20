@@ -1,0 +1,188 @@
+@import 'partials';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+
+    &--between {
+        justify-content: space-between;
+    }
+}
+
+.container {
+    &-wrapper {
+        color: $font-color; 
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+        
+    }
+}
+
+.main-header {
+    padding: 3vh 0;
+    a {
+        color: $font-color;
+        text-decoration: none;
+        font-size: 1.8rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+        color: $font-color;
+        text-decoration: none;
+        }
+    }
+
+    &__contact {
+        display: flex;
+    }
+
+    &__phone {
+        padding-left: 20px;
+        span {
+            font-size: 1.8rem;
+            display: block;
+        }
+    }
+}
+.fa {
+    &--custom-decor{
+        color: $decor-color;
+        font-size: 3rem;
+        vertical-align: middle;
+    }
+    &--custom-transform {
+        transform: rotate(90deg);
+        font-size: 2rem;
+    }
+}
+.main-section {
+    background: url(../img/background.png) no-repeat center center / cover;
+    height: 100vh;
+}
+
+.form {
+    color: $font-color;
+    padding-top: 26vh;
+    color: $font-color;
+
+    fieldset {
+        background: $form-background-color;
+        padding: 30px;
+    }
+    h2, h3 {
+        font-size: 1.7rem;
+        font-weight: bold;
+        margin-bottom: 25px;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    input, textarea {
+        display: block;
+        margin-bottom: 12px;
+        width: 100%;
+        padding: 5px;
+    }
+
+    button {
+        background: $decor-color;
+        padding: 10px 25px;
+        border: 0;
+        transition: all .2s;
+        font-size: 1.4rem;
+        font-weight: bold;
+
+        &:hover {
+            background-color: $font-color;
+        }
+    }
+
+}
+
+.font-decor {
+    color: $decor-color;
+}
+
+.footer {
+    color: $font-color;
+    background-color: $footer-background-color;
+    padding: 10vh 0;
+
+    &__icon {
+        background: $decor-color;
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // MÓJ PIERWOTNY KOD
+
+// .main {
+//     background: url('/app/img/background.png') no-repeat center center / cover;
+//     background-attachment: fixed;
+//     height: 75vh;
+// }
+
+// .main__naglowek {
+// display: flex;
+// padding-top: 10px;
+// justify-content: space-evenly;
+// font-size: 30px;
+// color: white;
+
+// }
+
+// .main__naglowek__kontakt {
+//     display: flex;
+// }
+
+// i {
+//     margin-right: 10px;
+//     color: $decor-color;
+// }
+
+// i.telefon {
+//     color: white;
+// }
+// p {
+//     margin: 2px;
+//     padding: 0;
+//     font-size: 10px;
+// }
+// p.main__naglowek__kontakt2__numer {
+//     font-size: 18px;
+// }
