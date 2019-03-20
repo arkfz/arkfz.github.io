@@ -7,7 +7,6 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('app/css'));
 });
 
-
 gulp.task('watch', function () {
     gulp.watch('app/scss/**/*.scss', gulp.series('sass'));
 }); 
