@@ -17,11 +17,11 @@
   z-index: 2; }
 
 .main-header {
-  padding: 3vh 0; }
+  padding: 1vh 0; }
   .main-header a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
     display: flex;
     align-items: center; }
@@ -33,12 +33,15 @@
   .main-header__phone {
     padding-left: 20px; }
     .main-header__phone span {
-      font-size: 1.8rem;
       display: block; }
+    .main-header__phone__call {
+      font-size: 0.8rem; }
+    .main-header__phone__number {
+      font-size: 1.2rem; }
 
 .fa--custom-decor {
   color: #f4b939;
-  font-size: 3rem;
+  font-size: 2.5rem;
   vertical-align: middle; }
 
 .fa--custom-transform {
@@ -46,23 +49,27 @@
   font-size: 2rem; }
 
 .main-section {
-  background: url(../img/background.png) no-repeat center center/cover;
-  height: 100vh; }
+  background: url(../img/background.png) no-repeat top center/cover;
+  height: 75vh; }
 
 .form {
   color: #fff;
-  padding-top: 26vh;
+  padding-top: 15vh;
   color: #fff; }
   .form fieldset {
     background: #001d8a;
-    padding: 30px; }
-  .form h2, .form h3 {
+    padding: 20px; }
+  .form h2,
+  .form h3 {
     font-size: 1.7rem;
     font-weight: bold;
     margin-bottom: 25px; }
+  .form h2 {
+    text-align: justify; }
   .form h3 {
     font-size: 1.4rem; }
-  .form input, .form textarea {
+  .form input,
+  .form textarea {
     display: block;
     margin-bottom: 12px;
     width: 100%;
@@ -71,7 +78,7 @@
     background: #f4b939;
     padding: 10px 25px;
     border: 0;
-    transition: all .2s;
+    transition: all 0.2s;
     font-size: 1.4rem;
     font-weight: bold; }
     .form button:hover {
@@ -83,10 +90,31 @@
 .footer {
   color: #fff;
   background-color: #292929;
-  padding: 10vh 0; }
-  .footer__icon {
-    background: #f4b939;
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    line-height: 60px; }
+  padding: 5vh 0;
+  text-align: center; }
+  .footer__a {
+    color: #fff; }
+    .footer__a__icon {
+      background: #f4b939;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-size: 25px;
+      color: #292929; }
+      .footer__a__icon--phone {
+        transform: rotate(90deg); }
+    .footer__a p {
+      font-size: 1.1rem;
+      margin-top: 7px; }
+  .footer__a:hover {
+    color: #fff;
+    text-decoration: none; }
+    .footer__a:hover span {
+      background: #292929; }
+    .footer__a:hover i {
+      color: #f4b939; }
+  .footer__description {
+    margin: 10px;
+    font-size: 0.8rem; }
