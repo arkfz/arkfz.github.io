@@ -119,10 +119,14 @@ a.logo {
 	background: rgba(14,216,214,.8);
 }
 
-/* TODO : Dlaczego to nie dziala?*/
+#nav.scroll .nav-link:hover  { /* Tak powinno być. Nie musimy dodawać klasy do linku. Można się oprzeć na dodanej klasie do zmiany koloru paska.*/
+	color: grey;
+}
+
+/* TODO : Dlaczego to nie dziala? Pierwsza próba.
 .navbar .navbar-nav .nav-link .zmianaHover:hover {
 	color:red;
-}
+} */
 
 /* OGÓLNE USTAWIENIA SEKCJI */
 
@@ -341,15 +345,13 @@ a.logo {
 	background-color: var(--font-color-title);
 	color: var(--font-color-white);
 	cursor: pointer;
-	margin: 10px;
+	margin: 5px;
 	font-size: 1.5rem;
 	transition: all .1s;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	line-height: 50px;
 }
 
-.team__social__icon a {
+a.team__social__icon {
 	color: var(--font-color-white);
 	text-decoration: none;
 }
@@ -460,6 +462,7 @@ text-decoration: none;
 }
 
 .footer {
+	text-align: center;
 	display: flex;
 	justify-content: space-around;
 }

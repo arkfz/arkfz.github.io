@@ -4,10 +4,10 @@ const widoczne = $('.navbar-nav .nav-item'); // Zmiana Hover
 $(window).on('scroll', function() {
     if($(window).scrollTop() > 50) { //50 - wartosc pikseli przerolowania
         nav.addClass('scroll');   
-        widoczne.addClass('zmianaHover'); // Zmiana Hover
+        // widoczne.addClass('zmianaHover'); // Zmiana Hover <--- NIEPOTRZEBNE
     } else {
         nav.removeClass('scroll'); 
-        widoczne.removeClass('zmianaHover'); // Zmiana Hover
+        // widoczne.removeClass('zmianaHover'); // Zmiana Hover <--- NIEPOTRZEBNE
     }
 });
 
