@@ -260,12 +260,12 @@
   }
 
   #registration {
-    height: 70vh;
+    height: 50vh;
   }
 
   .description:first-child {
     width: 95%;
-    margin-top: 50px;
+    
   }
 
   .description:nth-child(2) {
