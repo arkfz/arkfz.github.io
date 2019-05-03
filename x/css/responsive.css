@@ -260,7 +260,7 @@
   }
 
   #registration {
-    height: 70vh;
+    height: 50vh;
   }
 
   .description:first-child {
@@ -278,9 +278,9 @@
     letter-spacing: 2px;
   }
 
-  #foot {
+  /* #foot {
     height: 20vh;
-  }
+  } */
 
   .fa-mobile-alt {
     margin-right: 0.5em;
