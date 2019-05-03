@@ -243,8 +243,10 @@
     font-size: 10px;
   }
 
+  
+
   #head {
-    height: 10vh;
+    
     padding: 0px 20px;
   }
 
@@ -265,7 +267,7 @@
 
   .description:first-child {
     width: 95%;
-    margin-top: 20px;
+    margin-top: 50px;
   }
 
   .description:nth-child(2) {
@@ -283,7 +285,7 @@
     height: 20vh;
   } */
 #foot {
-  margin-top: 20px;
+  margin-top: 50px;
 }
   .fa-mobile-alt {
     margin-right: 0.5em;
