@@ -1,18 +1,22 @@
+body {
+  background-color: #CAFAFE;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #insta {
-  background: grey;
+  background: #2C3531;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-
   font-size: 200px;
 }
 
 #insta:hover {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
   -webkit-background-clip: text;
-
   background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  font-size: 200px;
 }
