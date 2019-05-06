@@ -12,8 +12,8 @@ html {
   height: 100%;
   overflow: hidden;
 }
-
-body:after {
+/* html zmienic */
+html:after {
   content: "";
   position: absolute;
   left: 0;

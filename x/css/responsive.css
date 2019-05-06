@@ -216,6 +216,7 @@
 
   .description:first-child {
     width: 90%;
+    margin-top: 50px;
   }
 
   .description:nth-child(2) {
