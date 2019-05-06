@@ -1,0 +1,215 @@
+@media screen and (min-width: 1920px) {
+  * {
+    font-size: 20px;
+  }
+
+  #logo {
+    height: 100px;
+  }
+
+  #catalog {
+    height: 50px;
+    margin-top: 25px;
+    padding: 10px 30px 50px;
+  }
+
+  .description:first-child {
+    width: 70%;
+  }
+
+  .description:nth-child(2) {
+    width: 40%;
+    margin-top: 70px;
+  }
+
+  #btn {
+    padding: 20px 60px;
+    margin-top: 50px;
+    letter-spacing: 2px;
+  }
+
+  .fa-mobile-alt {
+    margin-right: 0.5em;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+  * {
+    font-size: 18px;
+  }
+
+  #logo {
+    height: 90px;
+  }
+
+  #catalog {
+    height: 45px;
+    margin-top: 25px;
+    padding: 10px 25px 45px;
+  }
+
+  .description:first-child {
+    width: 75%;
+  }
+
+  .description:nth-child(2) {
+    width: 60%;
+    margin-top: 50px;
+  }
+
+  #btn {
+    padding: 20px 50px;
+    margin-top: 50px;
+    letter-spacing: 2px;
+  }
+
+  .fa-mobile-alt {
+    margin-right: 0.4em;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  * {
+    font-size: 16px;
+  }
+
+  #logo {
+    height: 80px;
+  }
+
+  #catalog {
+    height: 40px;
+    margin-top: 25px;
+    padding: 10px 20px 40px;
+  }
+
+  .description:first-child {
+    width: 80%;
+  }
+
+  .description:nth-child(2) {
+    width: 60%;
+    margin-top: 50px;
+  }
+
+  #btn {
+    padding: 20px 40px;
+    margin-top: 50px;
+    letter-spacing: 2px;
+  }
+
+  .fa-mobile-alt {
+    margin-right: 0.35em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  * {
+    font-size: 16px;
+  }
+
+  #logo {
+    height: 60px;
+  }
+
+  #catalog {
+    height: 30px;
+    margin-top: 25px;
+    padding: 10px 30px 40px;
+  }
+
+  .description:first-child {
+    width: 80%;
+  }
+
+  .description:nth-child(2) {
+    width: 70%;
+    margin-top: 50px;
+  }
+
+  #btn {
+    padding: 18px 35px;
+    margin-top: 40px;
+    letter-spacing: 2px;
+  }
+
+  .fa-mobile-alt {
+    margin-right: 0.3em;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  * {
+    font-size: 14px;
+  }
+
+  
+  #logo {
+    height: 50px;
+  }
+
+  #catalog {
+    height: 20px;
+    margin-top: 0px;
+    padding: 3px 20px 30px;
+  }
+
+  .description:first-child {
+    width: calc(100% - 60px);
+  }
+
+  .description:nth-child(2) {
+    width: 80%;
+    margin-top: 45px;
+  }
+
+  #btn {
+    padding: 15px 30px;
+    margin-top: 35px;
+    letter-spacing: 2px;
+  }
+
+  .fa-mobile-alt {
+    margin-right: 0.2em;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  * {
+    font-size: 10px;
+  }
+
+  #head {
+    padding: 0px 20px;
+  }
+
+  #logo {
+    height: 40px;
+  }
+
+  #catalog {
+    height: 20px;
+    margin-top: 5px;
+    padding: 3px 5px 20px;
+    text-align: right;
+  }
+
+  .description:first-child {
+    width: calc(100% - 40px);
+  }
+
+  .description:nth-child(2) {
+    width: 80%;
+    margin-top: 40px;
+  }
+
+  #btn {
+    padding: 10px 20px;
+    margin-top: 30px;
+    letter-spacing: 2px;
+  }
+
+  .fa-mobile-alt {
+    margin-right: 0.5em;
+  }
+}
