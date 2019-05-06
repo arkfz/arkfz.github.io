@@ -13,7 +13,7 @@ html {
   overflow: hidden;
 }
 
-html:after {
+body:after {
   content: "";
   position: absolute;
   left: 0;
