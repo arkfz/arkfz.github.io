@@ -1,6 +1,53 @@
-@import "partials";
+@import "colors";
+@import "mixins";
 
-h1 {
-  color: $decor-color;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  height: 96vh;
+  margin: 2vh;
+}
+
+#hero {
+  background: $hero-img no-repeat center center / cover;
+  div#hero_particles {
+    z-index: 1;
+    @include hero-settings;
+  }
+  div#hero_content {
+    z-index: 2;
+    @include hero-settings;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-size: 4em;
+      color: $title-font;
+      text-transform: uppercase;
+      span {
+        color: $title-deco-font;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+#hero:after {
+  z-index: 0;
+	content: '';
+	@include hero-settings;
+	background: $hero-gt;
+  
+}
+
+#portfolio {
+  background: $portfolio-bg;
+}
+
+#form {
+  background: $form-bg;
 }

@@ -1,0 +1,7 @@
+@mixin hero-settings {
+    position: absolute;
+    top: 2vh;
+    left: 2vh;
+    height: 96vh;
+    width: calc(100% - 4vh);
+}

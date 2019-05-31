@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "my-website",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "particles.js": "^2.0.0"
+  },
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-sass": "^4.0.2"

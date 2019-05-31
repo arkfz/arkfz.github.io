@@ -1,3 +1,51 @@
-h1 {
-  color: #f4b939;
-  text-align: center; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+section {
+  height: 96vh;
+  margin: 2vh; }
+
+#hero {
+  background: url(../img/header.jpg) no-repeat center center/cover; }
+  #hero div#hero_particles {
+    z-index: 1;
+    position: absolute;
+    top: 2vh;
+    left: 2vh;
+    height: 96vh;
+    width: calc(100% - 4vh); }
+  #hero div#hero_content {
+    z-index: 2;
+    position: absolute;
+    top: 2vh;
+    left: 2vh;
+    height: 96vh;
+    width: calc(100% - 4vh);
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #hero div#hero_content h1 {
+      font-size: 4em;
+      color: white;
+      text-transform: uppercase; }
+      #hero div#hero_content h1 span {
+        color: #34bec0;
+        text-transform: capitalize; }
+
+#hero:after {
+  z-index: 0;
+  content: '';
+  position: absolute;
+  top: 2vh;
+  left: 2vh;
+  height: 96vh;
+  width: calc(100% - 4vh);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)); }
+
+#portfolio {
+  background: #868686; }
+
+#form {
+  background: #9efe86; }
