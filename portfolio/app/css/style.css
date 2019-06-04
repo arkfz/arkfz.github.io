@@ -8,6 +8,7 @@ section {
   height: 100vh; }
 
 section#hero {
+  color: rgba(255, 255, 255, 0.7);
   background: url(../img/header.jpg) no-repeat center center/cover; }
   section#hero div#hero_particles {
     z-index: 1;
@@ -18,12 +19,72 @@ section#hero {
     z-index: 2;
     position: absolute;
     height: 100%;
-    width: 100%;
-    color: rgba(255, 255, 255, 0.9); }
-    section#hero div#hero_content header {
-      height: 10vh; }
+    width: 100%; }
+    section#hero div#hero_content header#hero_content_menu {
+      height: 15vh;
+      padding: 0 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      section#hero div#hero_content header#hero_content_menu #logo {
+        width: 20%;
+        font-size: 3vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        cursor: default; }
+        section#hero div#hero_content header#hero_content_menu #logo i {
+          margin-right: 5px;
+          font-size: 4vh; }
+      section#hero div#hero_content header#hero_content_menu .hidden {
+        opacity: 0;
+        transition: max-width 0.2s ease-in;
+        max-width: 0; }
+      section#hero div#hero_content header#hero_content_menu #logo:hover .hidden {
+        opacity: 1;
+        max-width: 1em;
+        transition: max-width 0.3s linear; }
+      section#hero div#hero_content header#hero_content_menu #logo:hover .hideme {
+        opacity: 0;
+        max-width: 0; }
+    section#hero div#hero_content div#hamburger {
+      height: 5vh;
+      width: 6vh;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      cursor: pointer; }
+      section#hero div#hero_content div#hamburger span.hamburger-line {
+        height: 2px;
+        width: 5vh;
+        background-color: rgba(255, 255, 255, 0.7);
+        display: block;
+        margin: 3px 0; }
+    section#hero div#hero_content div#hamburger:hover span.top {
+      animation: menuup 0.5s infinite;
+      transform: translateY(-3px);
+      animation-direction: alternate; }
+
+@keyframes menuup {
+  0% {
+    transform: translateY(-3px); }
+  100% {
+    transform: translateY(0px); } }
+    section#hero div#hero_content div#hamburger:hover span.bottom {
+      animation: menudown .5s infinite;
+      transform: translateY(3px);
+      animation-direction: alternate; }
+
+@keyframes menudown {
+  0% {
+    transform: translateY(3px); }
+  100% {
+    transform: translateY(0px); } }
     section#hero div#hero_content div#hero_content_title {
-      height: 80vh;
+      height: 70vh;
       font-family: "Montserrat", sans-serif;
       display: flex;
       flex-direction: column;
@@ -44,16 +105,16 @@ section#hero {
       section#hero div#hero_content div#hero_content_title #dev {
         font-weight: 400;
         font-size: 3vh;
-        text-align: right;
-        color: rgba(252, 252, 252, 0.4); }
+        text-align: right; }
   section#hero footer#tech_icons {
-    height: 10vh;
+    height: 15vh;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center; }
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw; }
     section#hero footer#tech_icons i {
       color: rgba(252, 252, 252, 0.4);
-      font-size: 3vh; }
+      font-size: 4vh; }
 
 #hero:after {
   z-index: 0;

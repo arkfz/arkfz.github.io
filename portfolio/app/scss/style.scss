@@ -1,6 +1,21 @@
+// 1. Imports
+// 2. Reset
+// 3. General Settings
+// 4. Section Hero
+// 4.1 Backgrounds
+// 4.2 Logo
+// 4.3 Menu
+// 4.4 Title
+// 4.5 Icons
+// 5. Section Portfolio
+// 6. Section Technologies
+// 7. Section Form
+
+// 1. IMPORTS
 @import "colors&";
 @import "mixins";
 
+// 2. RESET
 * {
   margin: 0;
   padding: 0;
@@ -8,13 +23,18 @@
   font-family: $main-fnt;
 }
 
+// 3. GENERAL SETTINGS
 section {
   height: 100vh;
 }
 
+// 4. SECTION HERO
+
+// 4.1 BACKGROUNDS
 section#hero {
+  color: $title-clr-fnt;
   background: $hero-img no-repeat center center / cover;
-  
+
   div#hero_particles {
     z-index: 1;
     @include hero-settings;
@@ -23,14 +43,103 @@ section#hero {
   div#hero_content {
     z-index: 2;
     @include hero-settings;
-    color: $title-clr-fnt;
 
-    header {
-      height: 10vh;
+    // 4.2 LOGO
+
+    header#hero_content_menu {
+      height: 15vh;
+      padding: 0 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      #logo {
+        width: 20%;
+        font-size: 3vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        cursor: default;
+        
+        i {
+          margin-right: 5px;
+          font-size: 4vh;
+        }
+      }
+
+      .hidden {
+        opacity: 0;
+        transition: max-width 0.2s ease-in;
+        max-width: 0;
+      }
+
+      #logo:hover .hidden {
+        opacity: 1;
+        max-width: 1em;
+        transition: max-width 0.3s linear;
+      }
+
+      #logo:hover .hideme {
+        opacity: 0;
+        max-width: 0;
+      }
     }
 
+    // 4.3 MENU
+
+    div#hamburger {
+      height: 5vh;
+      width: 6vh;
+      // border: 1px solid $title-clr-fnt;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      cursor: pointer;
+
+      span.hamburger-line {
+        height: 2px;
+        width: 5vh;
+        background-color: $title-clr-fnt;
+        display: block;
+        margin: 3px 0;
+      }
+    }
+    div#hamburger:hover {
+      span.top {
+        animation: menuup 0.5s infinite;
+        transform: translateY(-3px);
+        animation-direction: alternate;
+      }
+      @keyframes menuup {
+        0% {
+          transform: translateY(-3px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+      span.bottom {
+        animation: menudown .5s infinite;
+        transform: translateY(3px);
+        animation-direction: alternate;
+      }
+      @keyframes menudown {
+        0% {
+          transform: translateY(3px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+    }
+
+    // 4.4 TITLE
+
     div#hero_content_title {
-      height: 80vh;
+      height: 70vh;
       font-family: $title-fnt;
       display: flex;
       flex-direction: column;
@@ -57,20 +166,22 @@ section#hero {
         font-weight: 400;
         font-size: 3vh;
         text-align: right;
-        color: $bg-clr-tit;
       }
     }
   }
 
+  // 4.5 ICONS
+
   footer#tech_icons {
-    height: 10vh;
+    height: 15vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 5vw;
 
     i {
       color: $bg-clr-tit;
-      font-size: 3vh;
+      font-size: 4vh;
     }
   }
 }
