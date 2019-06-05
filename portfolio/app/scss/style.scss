@@ -5,32 +5,59 @@
 // 4.1 Backgrounds
 // 4.2 Logo
 // 4.3 Menu
+// 4.3.1 Hamburger
+// 4.3.2 Panel
 // 4.4 Title
 // 4.5 Icons
 // 5. Section Portfolio
 // 6. Section Technologies
 // 7. Section Form
 
-// 1. IMPORTS
-@import "colors&";
+/*
+--------------------------------------------------------------------------------
+1. IMPORTS
+--------------------------------------------------------------------------------
+*/
+
+@import "variables";
 @import "mixins";
 
-// 2. RESET
+/*
+--------------------------------------------------------------------------------
+2. RESET
+--------------------------------------------------------------------------------
+*/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: $main-fnt;
+  text-decoration: none;
 }
 
-// 3. GENERAL SETTINGS
+/*
+--------------------------------------------------------------------------------
+3. GENERAL SETTINGS
+--------------------------------------------------------------------------------
+*/
+
 section {
   height: 100vh;
 }
 
-// 4. SECTION HERO
+/*
+--------------------------------------------------------------------------------
+4. SECTION HERO
+--------------------------------------------------------------------------------
+*/
 
-// 4.1 BACKGROUNDS
+/*
+--------------------------------------------------------------------------------
+4.1 BACKGROUNDS
+--------------------------------------------------------------------------------
+*/
+
 section#hero {
   color: $title-clr-fnt;
   background: $hero-img no-repeat center center / cover;
@@ -44,14 +71,16 @@ section#hero {
     z-index: 2;
     @include hero-settings;
 
-    // 4.2 LOGO
+    /*
+--------------------------------------------------------------------------------
+4.2 HEADER & LOGO
+--------------------------------------------------------------------------------
+*/
 
-    header#hero_content_menu {
+    header#hero_menu {
       height: 15vh;
-      padding: 0 5vw;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include hero-side-pdd;
+      @include flex-space;
 
       #logo {
         width: 20%;
@@ -60,7 +89,7 @@ section#hero {
         justify-content: flex-start;
         align-items: center;
         cursor: default;
-        
+
         i {
           margin-right: 5px;
           font-size: 4vh;
@@ -69,14 +98,14 @@ section#hero {
 
       .hidden {
         opacity: 0;
-        transition: max-width 0.2s ease-in;
+        transition: max-width 0.2s linear;
         max-width: 0;
       }
 
       #logo:hover .hidden {
         opacity: 1;
         max-width: 1em;
-        transition: max-width 0.3s linear;
+        transition: max-width 0.5s linear;
       }
 
       #logo:hover .hideme {
@@ -85,58 +114,161 @@ section#hero {
       }
     }
 
-    // 4.3 MENU
-
-    div#hamburger {
-      height: 5vh;
-      width: 6vh;
-      // border: 1px solid $title-clr-fnt;
-      border-radius: 2px;
-      display: flex;
+    /*
+--------------------------------------------------------------------------------
+4.3 MENU
+--------------------------------------------------------------------------------
+*/
+    /*
+--------------------------------------------------------------------------------
+4.3.1 HAMBURGER
+--------------------------------------------------------------------------------
+*/
+    div#open-menu {
+      height: 4vh;
+      width: 4vw;
+      // border: 1px solid $bg-clr-tit;
+      @include flex-center;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
       cursor: pointer;
 
       span.hamburger-line {
         height: 2px;
-        width: 5vh;
+        width: 3vw;
         background-color: $title-clr-fnt;
         display: block;
         margin: 3px 0;
       }
     }
-    div#hamburger:hover {
+
+    div#open-menu:hover {
       span.top {
-        animation: menuup 0.5s infinite;
-        transform: translateY(-3px);
-        animation-direction: alternate;
+        animation: menu-1 0.5s 1;
       }
-      @keyframes menuup {
-        0% {
-          transform: translateY(-3px);
-        }
-        100% {
-          transform: translateY(0px);
-        }
+      span.middle {
+        animation: menu-2 0.5s 1;
       }
       span.bottom {
-        animation: menudown .5s infinite;
-        transform: translateY(3px);
-        animation-direction: alternate;
+        animation: menu-1 0.5s 1;
       }
-      @keyframes menudown {
-        0% {
-          transform: translateY(3px);
+      @include menu-animation-1;
+      @include menu-animation-2;
+    }
+
+    /*
+--------------------------------------------------------------------------------
+4.3.2 MENU PANEL
+--------------------------------------------------------------------------------
+*/
+
+    nav.hiddenmenu {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      background-color: $menu-bg;
+      z-index: 100;
+      #menu-header {
+        height: 15vh;
+        @include hero-side-pdd;
+        @include flex-space;
+        justify-content: flex-end;
+
+        span {
+          color: $menu-clr-fnt;
+          font-size: 1.5em;
         }
-        100% {
-          transform: translateY(0px);
+        span:hover {
+          @include list-hover;
+          cursor: pointer;
+        }
+      }
+
+      #menu-links {
+        height: 70vh;
+        display: flex;
+        @include hero-side-pdd;
+
+        div#aboutme {
+          flex-basis: 35%;
+
+          h4 {
+            color: $menu-clr-fnt;
+            font-size: 4em;
+          }
+
+          p#aboutme-description {
+            margin-bottom: 5vh;
+            font-weight: 200;
+            width: $menu-dsp-wth;
+          }
+        }
+      }
+
+      ul {
+        flex-basis: 65%;
+        list-style-type: none;
+
+        li {
+          padding: 0 50px;
+
+          a {
+            color: $menu-clr-fnt;
+            font-size: 2em;
+            font-weight: 700;
+          }
+
+          a:hover {
+            @include list-hover;
+          }
+
+          p {
+            font-weight: $read-txt;
+            margin-bottom: 5vh;
+          }
         }
       }
     }
 
-    // 4.4 TITLE
+    div#cv {
+      height: 15vh;
+      padding: 0 25vw;
+      @include flex-center;
+      font-weight: $read-txt;
+
+      div {
+        width: 25%;
+
+        @include flex-center;
+        flex-direction: column;
+
+        i {
+          color: $menu-clr-fnt;
+          font-size: 3em;
+          font-weight: 400;
+        }
+        i:hover {
+          @include up-animation;
+          animation: up 0.2s 1;
+        }
+        p {
+          margin-top: 10px;
+          font-size: 0.8em;
+        }
+      }
+    }
+
+    nav.show-menu {
+      display: block;
+    }
+
+    /*
+--------------------------------------------------------------------------------
+4.4 HERO TITLE
+--------------------------------------------------------------------------------
+*/
 
     div#hero_content_title {
       height: 70vh;
@@ -170,14 +302,16 @@ section#hero {
     }
   }
 
-  // 4.5 ICONS
+  /*
+--------------------------------------------------------------------------------
+4.5 BOTTOM ICONS
+--------------------------------------------------------------------------------
+*/
 
   footer#tech_icons {
     height: 15vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5vw;
+    @include hero-side-pdd;
+    @include flex-space;
 
     i {
       color: $bg-clr-tit;
@@ -186,6 +320,12 @@ section#hero {
   }
 }
 
+/*
+--------------------------------------------------------------------------------
+BACKGROUND GRADIENT
+--------------------------------------------------------------------------------
+*/
+
 #hero:after {
   z-index: 0;
   content: "";
@@ -193,9 +333,27 @@ section#hero {
   background: $hero-gt;
 }
 
+/*
+--------------------------------------------------------------------------------
+5. SECTION PORTFOLIO
+--------------------------------------------------------------------------------
+*/
+
 #portfolio {
   background: $portfolio-bg;
 }
+
+/*
+--------------------------------------------------------------------------------
+6. SECTION TECHNOLOGIES
+--------------------------------------------------------------------------------
+*/
+
+/*
+--------------------------------------------------------------------------------
+7. SECTION FORM
+--------------------------------------------------------------------------------
+*/
 
 #form {
   background: $form-bg;

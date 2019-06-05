@@ -18,12 +18,16 @@
     <!-- Welcome Page -->
     <section id="hero">
 
+        <!-- Box with Particles -->
         <div id="hero_particles"></div>
 
+        <!-- Real Content -->
         <div id="hero_content">
 
-            <header id="hero_content_menu">
+            <!-- Header -->
+            <header id="hero_menu">
 
+                <!-- Logo -->
                 <div id="logo">
                     <i class="fab fa-dev"></i>
                     <span class="hidden">A</span>
@@ -43,31 +47,104 @@
                     <span>z</span>
                 </div>
 
-                <nav>
-                    <div id="hamburger">
-                        <span class="hamburger-line top"></span>
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line bottom"></span>
-                
+                <!-- Menu Hamburger Button -->
+
+                <div id="open-menu" class="hamburger-btn">
+                    <span class="hamburger-line top"></span>
+                    <span class="hamburger-line middle"></span>
+                    <span class="hamburger-line bottom"></span>
+                </div>
+
+                <!-- Menu Panel Hidden -->
+                <nav id="menu-panel" class="hiddenmenu">
+
+                    <!-- Menu Close Button -->
+                    <div id="menu-header">
+                        <span id="close-menu">
+                            Close
+                        </span>
                     </div>
 
+                    <!-- Menu Content -->
+                    <div id="menu-links">
 
+                        <div id="aboutme">
+
+                            <h4>About me</h4>
+
+                            <p id="aboutme-description">
+                                A few words about me. Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen
+                                book. It has survived not only five centuries, but also the leap into electronic
+                                typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                                release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                                desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                It is a long established fact that a reader will be distracted by the readable content
+                                of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                                more-or-less normal distribution of letters, as opposed to using 'Content here, content
+                                here', making it look like readable English.
+                            </p>
+                        </div>
+                        <ul>
+                            <li id="menu-item">
+                                <a href="#portfolio">Portfolio</a>
+                                <p>
+                                    There are many variations of passages of Lorem Ipsum available, but the majority
+                                    have suffered alteration
+                                </p>
+                            </li>
+                            <li id="menu-item">
+                                <a href="#technologies">Technologies</a>
+                                <p>
+                                    Ipsum is therefore always free from repetition, injected humour, or
+                                    non-characteristic words etc.All the Lorem Ipsum generators on the Internet tend to
+                                    repeat predefined chunks.
+                                </p>
+                            </li>
+                            <li id="menu-item">
+                                <a href="#form">Contact</a>
+                                <p>
+                                    This book is a treatise on the theory of ethics, very popular during the
+                                    Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes
+                                    from a line in section 1.10.32.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="cv">
+                        <div>
+                            <a href="https://github.com/arkfz">
+                                <i class="fab fa-github-square"></i>
+                            </a>
+                            <p>My GitHub</p>
+                        </div>
+                        <div>
+                            <a href="">
+                                <i class="far fa-file-pdf"></i>
+                            </a>
+                            <p>CV EN</p>
+                        </div>
+                        <div>
+                            <a href="">
+                                <i class="far fa-file-pdf"></i>
+                            </a>
+                            <p>CV PL</p>
+                        </div>
+                    </div>
                 </nav>
-
             </header>
 
+            <!-- Hero Title -->
             <div id="hero_content_title">
-
                 <div id="title">
                     <div id="front"><span>&nbsp;frontend&nbsp;</span></div>
                     <div id="dev">developer</div>
                 </div>
-
             </div>
 
-
+            <!-- Bottom Icons-->
             <footer id="tech_icons">
-
                 <i class="fab fa-html5"></i>
                 <i class="fab fa-css3-alt"></i>
                 <i class="fab fa-js"></i>
@@ -76,7 +153,6 @@
                 <i class="fab fa-bootstrap"></i>
                 <i class="fab fa-wordpress"></i>
                 <i class="fab fa-git"></i>
-
             </footer>
 
     </section>

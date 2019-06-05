@@ -1,5 +1,103 @@
+// 1. Size Settings
+// 2. Flex
+// 3. Animations
+
+/*------------------------------------------------------------------------------
+1. SIZE SETTINGS
+------------------------------------------------------------------------------*/
+
 @mixin hero-settings {
   position: absolute;
   height: 100%;
   width: 100%;
+}
+
+@mixin hero-side-pdd {
+  padding: 0 5vw;
+}
+
+/*------------------------------------------------------------------------------
+2. FLEX
+------------------------------------------------------------------------------*/
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-space {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-evenly {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/*------------------------------------------------------------------------------
+3. ANIMATIONS
+------------------------------------------------------------------------------*/
+
+@mixin menu-animation-1 {
+  @keyframes menu-1 {
+    0% {
+      transform: translateX(0px);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(0px);
+    }
+    75% {
+      transform: translateX(5px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+}
+
+@mixin menu-animation-2 {
+  @keyframes menu-2 {
+    0% {
+      transform: translateX(0px);
+    }
+    25% {
+      transform: translateX(5px);
+    }
+    50% {
+      transform: translateX(0px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+}
+
+@mixin up-animation {
+  @keyframes up {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
+
+@mixin list-hover {
+  border-left: 5px solid $main-clr-fnt;
+  padding-left: 5px;
+  transition: 0.2s linear;
 }
