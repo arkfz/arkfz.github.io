@@ -16,6 +16,11 @@
   padding: 0 5vw;
 }
 
+@mixin header {
+  height: 15vh;
+  width: 100%;
+}
+
 /*------------------------------------------------------------------------------
 2. FLEX
 ------------------------------------------------------------------------------*/
@@ -35,6 +40,12 @@
 @mixin flex-evenly {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+}
+
+@mixin flex-end {
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 

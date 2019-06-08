@@ -1,8 +1,6 @@
-/*
---------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 1. IMPORTS
---------------------------------------------------------------------------------
-*/
+------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------
 1. FONTS
 ------------------------------------------------------------------------------*/
@@ -30,11 +28,9 @@
 /*------------------------------------------------------------------------------
 3. ANIMATIONS
 ------------------------------------------------------------------------------*/
-/*
---------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 2. RESET
---------------------------------------------------------------------------------
-*/
+------------------------------------------------------------------------------*/
 * {
   margin: 0;
   padding: 0;
@@ -42,114 +38,58 @@
   font-family: "Poppins", sans-serif;
   text-decoration: none; }
 
-/*
---------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 3. GENERAL SETTINGS
---------------------------------------------------------------------------------
-*/
-section {
-  height: 100vh; }
+------------------------------------------------------------------------------*/
+div#smooth {
+  position: relative;
+  height: 100vh;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  scroll-snap-type: mandatory;
+  scroll-snap-type: y mandatory; }
 
-/*
---------------------------------------------------------------------------------
-4. SECTION HERO
---------------------------------------------------------------------------------
-*/
-/*
---------------------------------------------------------------------------------
-4.1 BACKGROUNDS
---------------------------------------------------------------------------------
-*/
-section#hero {
-  color: rgba(255, 255, 255, 0.7);
-  background: url(../img/header.jpg) no-repeat center center/cover;
-  /*
---------------------------------------------------------------------------------
-4.5 BOTTOM ICONS
---------------------------------------------------------------------------------
-*/ }
-  section#hero div#hero_particles {
-    z-index: 1;
-    position: absolute;
-    height: 100%;
-    width: 100%; }
-  section#hero div#hero_content {
-    z-index: 2;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    /*
---------------------------------------------------------------------------------
-4.2 HEADER & LOGO
---------------------------------------------------------------------------------
-*/
-    /*
---------------------------------------------------------------------------------
-4.3 MENU
---------------------------------------------------------------------------------
-*/
-    /*
---------------------------------------------------------------------------------
-4.3.1 HAMBURGER
---------------------------------------------------------------------------------
-*/
-    /*
---------------------------------------------------------------------------------
-4.3.2 MENU PANEL
---------------------------------------------------------------------------------
-*/
-    /*
---------------------------------------------------------------------------------
-4.4 HERO TITLE
---------------------------------------------------------------------------------
-*/ }
-    section#hero div#hero_content header#hero_menu {
-      height: 15vh;
-      padding: 0 5vw;
-      display: flex;
-      justify-content: space-between;
-      align-items: center; }
-      section#hero div#hero_content header#hero_menu #logo {
-        width: 20%;
-        font-size: 3vh;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        cursor: default; }
-        section#hero div#hero_content header#hero_menu #logo i {
-          margin-right: 5px;
-          font-size: 4vh; }
-      section#hero div#hero_content header#hero_menu .hidden {
-        opacity: 0;
-        transition: max-width 0.2s linear;
-        max-width: 0; }
-      section#hero div#hero_content header#hero_menu #logo:hover .hidden {
-        opacity: 1;
-        max-width: 1em;
-        transition: max-width 0.5s linear; }
-      section#hero div#hero_content header#hero_menu #logo:hover .hideme {
-        opacity: 0;
-        max-width: 0; }
-    section#hero div#hero_content div#open-menu {
-      height: 4vh;
-      width: 4vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      cursor: pointer; }
-      section#hero div#hero_content div#open-menu span.hamburger-line {
-        height: 2px;
-        width: 3vw;
-        background-color: rgba(255, 255, 255, 0.7);
-        display: block;
-        margin: 3px 0; }
-    section#hero div#hero_content div#open-menu:hover span.top {
-      animation: menu-1 0.5s 1; }
-    section#hero div#hero_content div#open-menu:hover span.middle {
-      animation: menu-2 0.5s 1; }
-    section#hero div#hero_content div#open-menu:hover span.bottom {
-      animation: menu-1 0.5s 1; }
+section {
+  min-height: 100vh;
+  scroll-snap-align: center; }
+
+/*------------------------------------------------------------------------------
+4. MENU
+------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------
+4.1 HAMBURGER
+------------------------------------------------------------------------------*/
+div#menu-head {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 15vh;
+  width: 25vw;
+  padding: 0 5vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+  div#menu-head div#open-menu {
+    height: 45px;
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer; }
+    div#menu-head div#open-menu span.hamburger-line {
+      height: 2px;
+      width: 50px;
+      background-color: rgba(255, 255, 255, 0.7);
+      display: block;
+      margin: 3px 0; }
+  div#menu-head div#open-menu:hover span.top {
+    animation: menu-1 0.5s 1; }
+  div#menu-head div#open-menu:hover span.middle {
+    animation: menu-2 0.5s 1; }
+  div#menu-head div#open-menu:hover span.bottom {
+    animation: menu-1 0.5s 1; }
 
 @keyframes menu-1 {
   0% {
@@ -174,91 +114,122 @@ section#hero {
     transform: translateX(-5px); }
   100% {
     transform: translateX(0px); } }
-    section#hero div#hero_content nav.hiddenmenu {
-      display: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      width: 100%;
-      background-color: #1e1e1e;
-      z-index: 100; }
-      section#hero div#hero_content nav.hiddenmenu #menu-header {
-        height: 15vh;
-        padding: 0 5vw;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        justify-content: flex-end; }
-        section#hero div#hero_content nav.hiddenmenu #menu-header span {
-          color: white;
-          font-size: 1.5em; }
-        section#hero div#hero_content nav.hiddenmenu #menu-header span:hover {
-          border-left: 5px solid #8e8e8e;
-          padding-left: 5px;
-          transition: 0.2s linear;
-          cursor: pointer; }
-      section#hero div#hero_content nav.hiddenmenu #menu-links {
-        height: 70vh;
-        display: flex;
-        padding: 0 5vw; }
-        section#hero div#hero_content nav.hiddenmenu #menu-links div#aboutme {
-          flex-basis: 35%; }
-          section#hero div#hero_content nav.hiddenmenu #menu-links div#aboutme h4 {
-            color: white;
-            font-size: 4em; }
-          section#hero div#hero_content nav.hiddenmenu #menu-links div#aboutme p#aboutme-description {
-            margin-bottom: 5vh;
-            font-weight: 200;
-            width: 80%; }
-      section#hero div#hero_content nav.hiddenmenu ul {
-        flex-basis: 65%;
-        list-style-type: none; }
-        section#hero div#hero_content nav.hiddenmenu ul li {
-          padding: 0 50px; }
-          section#hero div#hero_content nav.hiddenmenu ul li a {
-            color: white;
-            font-size: 2em;
-            font-weight: 700; }
-          section#hero div#hero_content nav.hiddenmenu ul li a:hover {
-            border-left: 5px solid #8e8e8e;
-            padding-left: 5px;
-            transition: 0.2s linear; }
-          section#hero div#hero_content nav.hiddenmenu ul li p {
-            font-weight: 200;
-            margin-bottom: 5vh; }
-    section#hero div#hero_content div#cv {
-      height: 15vh;
-      padding: 0 25vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: 200; }
-      section#hero div#hero_content div#cv div {
-        width: 25%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column; }
-        section#hero div#hero_content div#cv div i {
-          color: white;
-          font-size: 3em;
-          font-weight: 400; }
-        section#hero div#hero_content div#cv div i:hover {
-          animation: up 0.2s 1; }
 
-@keyframes up {
-  0% {
-    transform: translateY(0px); }
-  50% {
-    transform: translateY(-10px); }
-  100% {
-    transform: translateY(0px); } }
-        section#hero div#hero_content div#cv div p {
-          margin-top: 10px;
-          font-size: 0.8em; }
-    section#hero div#hero_content nav.show-menu {
-      display: block; }
+/*------------------------------------------------------------------------------
+4.2 MENU PANEL
+------------------------------------------------------------------------------*/
+nav.hiddenmenu {
+  display: none;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: #272727;
+  z-index: 100;
+  color: #8e8e8e; }
+  nav.hiddenmenu #menu-header {
+    height: 15vh;
+    width: 100%;
+    padding: 0 5vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    nav.hiddenmenu #menu-header span {
+      color: white;
+      font-size: 1.5em; }
+    nav.hiddenmenu #menu-header span:hover {
+      border-left: 5px solid #8e8e8e;
+      padding-left: 5px;
+      transition: 0.2s linear;
+      cursor: pointer; }
+  nav.hiddenmenu #menu-links {
+    height: 70vh;
+    display: flex;
+    padding: 0 5vw; }
+    nav.hiddenmenu #menu-links div#aboutme {
+      flex-basis: 35%; }
+      nav.hiddenmenu #menu-links div#aboutme h4 {
+        color: white;
+        font-size: 4em; }
+      nav.hiddenmenu #menu-links div#aboutme p#aboutme-description {
+        margin-bottom: 5vh;
+        font-weight: 200;
+        width: 80%; }
+  nav.hiddenmenu ul {
+    flex-basis: 65%;
+    list-style-type: none; }
+    nav.hiddenmenu ul li {
+      padding: 0 50px; }
+      nav.hiddenmenu ul li a {
+        color: white;
+        font-size: 2em;
+        font-weight: 700; }
+      nav.hiddenmenu ul li a:hover {
+        border-left: 5px solid #8e8e8e;
+        padding-left: 5px;
+        transition: 0.2s linear; }
+      nav.hiddenmenu ul li p {
+        font-weight: 200;
+        margin-bottom: 5vh; }
+
+nav.show-menu {
+  display: block; }
+
+/*------------------------------------------------------------------------------
+5. SECTION HERO
+------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------
+5.1 BACKGROUNDS
+------------------------------------------------------------------------------*/
+section#hero {
+  color: rgba(255, 255, 255, 0.7);
+  background: url(../img/header.jpg) no-repeat center center/cover;
+  /*------------------------------------------------------------------------------
+5.4 BOTTOM ICONS
+------------------------------------------------------------------------------*/ }
+  section#hero div#hero_particles {
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%; }
+  section#hero div#hero_content {
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /*------------------------------------------------------------------------------
+5.2 HEADER & LOGO
+------------------------------------------------------------------------------*/
+    /*------------------------------------------------------------------------------
+5.3 HERO TITLE
+------------------------------------------------------------------------------*/ }
+    section#hero div#hero_content header#hero_header {
+      height: 15vh;
+      width: 100%;
+      padding: 0 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      section#hero div#hero_content header#hero_header #logo {
+        width: 20%;
+        font-size: 3vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        cursor: default; }
+        section#hero div#hero_content header#hero_header #logo i {
+          margin-right: 5px;
+          font-size: 4vh; }
+      section#hero div#hero_content header#hero_header .hidden {
+        opacity: 0;
+        transition: max-width 0.2s linear;
+        max-width: 0; }
+      section#hero div#hero_content header#hero_header #logo:hover .hidden {
+        opacity: 1;
+        max-width: 1em;
+        transition: max-width 0.5s linear; }
+      section#hero div#hero_content header#hero_header #logo:hover .hideme {
+        opacity: 0;
+        max-width: 0; }
     section#hero div#hero_content div#hero_content_title {
       height: 70vh;
       font-family: "Montserrat", sans-serif;
@@ -267,6 +238,7 @@ section#hero {
       align-items: center;
       justify-content: center; }
       section#hero div#hero_content div#hero_content_title #front {
+        user-select: none;
         background-color: rgba(252, 252, 252, 0.4);
         overflow: hidden;
         font-weight: 900;
@@ -292,11 +264,9 @@ section#hero {
       color: rgba(252, 252, 252, 0.4);
       font-size: 4vh; }
 
-/*
---------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 BACKGROUND GRADIENT
---------------------------------------------------------------------------------
-*/
+------------------------------------------------------------------------------*/
 #hero:after {
   z-index: 0;
   content: "";
@@ -305,23 +275,20 @@ BACKGROUND GRADIENT
   width: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)); }
 
-/*
---------------------------------------------------------------------------------
-5. SECTION PORTFOLIO
---------------------------------------------------------------------------------
-*/
+/*------------------------------------------------------------------------------
+6. SECTION PORTFOLIO
+------------------------------------------------------------------------------*/
 #portfolio {
-  background: #868686; }
+  background: #158baf; }
 
-/*
---------------------------------------------------------------------------------
-6. SECTION TECHNOLOGIES
---------------------------------------------------------------------------------
-*/
-/*
---------------------------------------------------------------------------------
-7. SECTION FORM
---------------------------------------------------------------------------------
-*/
-#form {
-  background: #9efe86; }
+/*------------------------------------------------------------------------------
+7. SECTION TECHNOLOGIES
+------------------------------------------------------------------------------*/
+#technologies {
+  background: #af1581; }
+
+/*------------------------------------------------------------------------------
+8. SECTION CONTACT
+------------------------------------------------------------------------------*/
+#contact {
+  background: #60af15; }
