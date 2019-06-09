@@ -17,37 +17,29 @@ section {
   min-height: 100vh;
   scroll-snap-align: center; }
 
-div#menu-head {
-  z-index: 99;
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 15vh;
-  width: 25vw;
-  padding: 0 5vw;
+div.open-menu {
+  height: 45px;
+  width: 75px;
   display: flex;
-  justify-content: flex-end;
-  align-items: center; }
-  div#menu-head div#open-menu {
-    height: 45px;
-    width: 75px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    cursor: pointer; }
-    div#menu-head div#open-menu span.hamburger-line {
-      height: 2px;
-      width: 50px;
-      background-color: rgba(255, 255, 255, 0.7);
-      display: block;
-      margin: 3px 0; }
-  div#menu-head div#open-menu:hover span.top {
-    animation: menu-1 0.5s 1; }
-  div#menu-head div#open-menu:hover span.middle {
-    animation: menu-2 0.5s 1; }
-  div#menu-head div#open-menu:hover span.bottom {
-    animation: menu-1 0.5s 1; }
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer; }
+  div.open-menu span.hamburger-line {
+    height: 2px;
+    width: 50px;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: block;
+    margin: 3px 0; }
+
+div.open-menu:hover span.top {
+  animation: menu-1 0.5s 1; }
+
+div.open-menu:hover span.middle {
+  animation: menu-2 0.5s 1; }
+
+div.open-menu:hover span.bottom {
+  animation: menu-1 0.5s 1; }
 
 @keyframes menu-1 {
   0% {
@@ -84,7 +76,8 @@ nav.hiddenmenu {
   nav.hiddenmenu #menu-header {
     height: 15vh;
     width: 100%;
-    padding: 0 5vw;
+    padding: 0 6vw;
+    padding: 0 6vw;
     display: flex;
     justify-content: flex-end;
     align-items: center; }
@@ -99,7 +92,7 @@ nav.hiddenmenu {
   nav.hiddenmenu #menu-links {
     height: 70vh;
     display: flex;
-    padding: 0 5vw; }
+    padding: 0 6vw; }
 
 @keyframes load-list {
   from {
@@ -171,7 +164,8 @@ section#hero {
     section#hero div#hero_content header#hero_header {
       height: 15vh;
       width: 100%;
-      padding: 0 5vw;
+      padding: 0 6vw;
+      padding: 0 6vw;
       display: flex;
       justify-content: space-between;
       align-items: center; }
@@ -222,7 +216,7 @@ section#hero {
         text-align: right; }
   section#hero footer#tech_icons {
     height: 15vh;
-    padding: 0 5vw;
+    padding: 0 6vw;
     display: flex;
     justify-content: space-between;
     align-items: center; }

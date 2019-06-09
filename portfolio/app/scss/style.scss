@@ -56,47 +56,49 @@ section {
 //------------------------------------------------------------------------------
 // 4.1 HAMBURGER
 //------------------------------------------------------------------------------
-div#menu-head {
-  z-index: 99;
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 15vh;
-  width: 25vw;
-  @include hero-side-pdd;
-  @include flex-end;
+div.open-menu {
+  height: 45px;
+  width: 75px;
+  // border: 1px solid $bg-clr-tit;
+  @include flex-center;
+  flex-direction: column;
+  cursor: pointer;
 
-  div#open-menu {
-    height: 45px;
-    width: 75px;
-    // border: 1px solid $bg-clr-tit;
-    @include flex-center;
-    flex-direction: column;
-    cursor: pointer;
-
-    span.hamburger-line {
-      height: 2px;
-      width: 50px;
-      background-color: $title-clr-fnt;
-      display: block;
-      margin: 3px 0;
-    }
-  }
-
-  div#open-menu:hover {
-    span.top {
-      animation: menu-1 0.5s 1;
-    }
-    span.middle {
-      animation: menu-2 0.5s 1;
-    }
-    span.bottom {
-      animation: menu-1 0.5s 1;
-    }
-    @include menu-animation-1;
-    @include menu-animation-2;
+  span.hamburger-line {
+    height: 2px;
+    width: 50px;
+    background-color: $title-clr-fnt;
+    display: block;
+    margin: 3px 0;
   }
 }
+
+div.open-menu:hover {
+  span.top {
+    animation: menu-1 0.5s 1;
+  }
+  span.middle {
+    animation: menu-2 0.5s 1;
+  }
+  span.bottom {
+    animation: menu-1 0.5s 1;
+  }
+  @include menu-animation-1;
+  @include menu-animation-2;
+}
+
+// div#menu-head {
+//   z-index: 99;
+//   position: fixed;
+//   top: 0;
+//   right: 0;
+//   height: 15vh;
+//   width: 25vw;
+//   @include hero-side-pdd;
+//   @include flex-end;
+
+  
+// }
 
 //------------------------------------------------------------------------------
 // 4.2 MENU PANEL
