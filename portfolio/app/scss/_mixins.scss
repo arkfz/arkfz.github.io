@@ -15,12 +15,17 @@
 @mixin header {
   height: 15vh;
   width: 100%;
-  padding: 0 6vw;
 }
 
 @mixin hero-side-pdd {
   padding: 0 6vw;
 }
+
+@mixin subpage-side-pdd {
+  padding-right: 6vw;
+}
+
+
 //------------------------------------------------------------------------------
 // 2. FLEX
 //------------------------------------------------------------------------------
@@ -31,7 +36,7 @@
   align-items: center;
 }
 
-@mixin flex-space {
+@mixin flex-between {
   display: flex;
   justify-content: space-between;
   align-items: center;

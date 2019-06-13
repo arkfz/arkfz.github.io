@@ -20,10 +20,19 @@ section {
 header {
   height: 15vh;
   width: 100%;
-  padding: 0 6vw;
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  header#hero_header {
+    padding: 0 6vw; }
+  header.subpage {
+    padding-right: 6vw; }
+    header.subpage h2 {
+      color: white;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+      width: 50vw;
+      font-size: 2.5em;
+      padding-left: 4vw; }
 
 div.open-menu {
   height: 45px;
@@ -39,15 +48,6 @@ div.open-menu {
     background-color: rgba(255, 255, 255, 0.7);
     display: block;
     margin: 3px 0; }
-
-div.open-menu:hover span.top {
-  animation: menu-1 0.5s 1; }
-
-div.open-menu:hover span.middle {
-  animation: menu-2 0.5s 1; }
-
-div.open-menu:hover span.bottom {
-  animation: menu-1 0.5s 1; }
 
 @keyframes menu-1 {
   0% {
@@ -72,6 +72,15 @@ div.open-menu:hover span.bottom {
     transform: translateX(-5px); }
   100% {
     transform: translateX(0px); } }
+  div.open-menu:hover span:nth-of-type(1) {
+    animation: menu-1 0.5s 1; }
+  div.open-menu:hover span:nth-of-type(2) {
+    animation: menu-2 0.5s 1; }
+  div.open-menu:hover span:nth-of-type(3) {
+    animation: menu-1 0.5s 1; }
+
+section:nth-of-type(n + 2) span.hamburger-line {
+  background-color: #494949; }
 
 nav.hiddenmenu {
   display: none;
@@ -85,18 +94,17 @@ nav.hiddenmenu {
     height: 15vh;
     width: 100%;
     padding: 0 6vw;
-    padding: 0 6vw;
     display: flex;
     justify-content: flex-end;
     align-items: center; }
     nav.hiddenmenu #menu-header span {
       color: white;
       font-size: 1.5em; }
-    nav.hiddenmenu #menu-header span:hover {
-      border-left: 5px solid #8e8e8e;
-      padding-left: 5px;
-      transition: 0.2s linear;
-      cursor: pointer; }
+      nav.hiddenmenu #menu-header span:hover {
+        border-left: 5px solid #8e8e8e;
+        padding-left: 5px;
+        transition: 0.2s linear;
+        cursor: pointer; }
   nav.hiddenmenu #menu-links {
     height: 70vh;
     display: flex;
@@ -140,8 +148,8 @@ nav.hiddenmenu {
         nav.hiddenmenu ul li p a {
           color: #8e8e8e;
           text-decoration: none; }
-        nav.hiddenmenu ul li p a:hover {
-          color: white; }
+          nav.hiddenmenu ul li p a:hover {
+            color: white; }
     nav.hiddenmenu ul li:nth-of-type(1) {
       animation: load-list 0.6s forwards 0.8s; }
     nav.hiddenmenu ul li:nth-of-type(2) {
@@ -169,35 +177,27 @@ section#hero {
     position: absolute;
     height: 100%;
     width: 100%; }
-    section#hero div#hero_content header#hero_header {
-      height: 15vh;
-      width: 100%;
-      padding: 0 6vw;
-      padding: 0 6vw;
+    section#hero div#hero_content header#hero_header #logo {
+      width: 20%;
+      font-size: 3vh;
       display: flex;
-      justify-content: space-between;
-      align-items: center; }
-      section#hero div#hero_content header#hero_header #logo {
-        width: 20%;
-        font-size: 3vh;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        cursor: default; }
-        section#hero div#hero_content header#hero_header #logo i {
-          margin-right: 5px;
-          font-size: 4vh; }
-      section#hero div#hero_content header#hero_header .hidden {
-        opacity: 0;
-        transition: max-width 0.2s linear;
-        max-width: 0; }
-      section#hero div#hero_content header#hero_header #logo:hover .hidden {
-        opacity: 1;
-        max-width: 1em;
-        transition: max-width 0.5s linear; }
-      section#hero div#hero_content header#hero_header #logo:hover .hideme {
-        opacity: 0;
-        max-width: 0; }
+      justify-content: flex-start;
+      align-items: center;
+      cursor: default; }
+      section#hero div#hero_content header#hero_header #logo i {
+        margin-right: 5px;
+        font-size: 4vh; }
+    section#hero div#hero_content header#hero_header .hidden {
+      opacity: 0;
+      transition: max-width 0.2s linear;
+      max-width: 0; }
+    section#hero div#hero_content header#hero_header #logo:hover .hidden {
+      opacity: 1;
+      max-width: 1em;
+      transition: max-width 0.5s linear; }
+    section#hero div#hero_content header#hero_header #logo:hover .hideme {
+      opacity: 0;
+      max-width: 0; }
     section#hero div#hero_content div#hero_content_title {
       height: 70vh;
       font-family: "Montserrat", sans-serif;
@@ -241,7 +241,7 @@ section#hero {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)); }
 
 #portfolio {
-  background: #158baf; }
+  background: white; }
 
 #technologies {
   background: #af1581; }

@@ -52,7 +52,22 @@ section {
 
 header {
   @include header;
-  @include flex-space;
+  @include flex-between;
+
+  &#hero_header {
+    @include hero-side-pdd;
+  }
+  &.subpage {
+    @include subpage-side-pdd;
+
+    h2 {
+      color: $menu-clr-fnt;
+      background: $h-subpage;
+      width: 50vw;
+      font-size: 2.5em;
+      padding-left: 4vw;
+    }
+  }
 }
 
 //------------------------------------------------------------------------------
@@ -61,6 +76,7 @@ header {
 //------------------------------------------------------------------------------
 // 4.1 HAMBURGER
 //------------------------------------------------------------------------------
+
 div.open-menu {
   height: 45px;
   width: 75px;
@@ -76,34 +92,28 @@ div.open-menu {
     display: block;
     margin: 3px 0;
   }
+
+  &:hover {
+    @include menu-animation-1;
+    @include menu-animation-2;
+
+    span:nth-of-type(1) {
+      animation: menu-1 0.5s 1;
+    }
+    span:nth-of-type(2) {
+      animation: menu-2 0.5s 1;
+    }
+    span:nth-of-type(3) {
+      animation: menu-1 0.5s 1;
+    }
+  }
 }
 
-div.open-menu:hover {
-  span.top {
-    animation: menu-1 0.5s 1;
+section:nth-of-type(n + 2) {
+  span.hamburger-line {
+    background-color: $on-white-bg;
   }
-  span.middle {
-    animation: menu-2 0.5s 1;
-  }
-  span.bottom {
-    animation: menu-1 0.5s 1;
-  }
-  @include menu-animation-1;
-  @include menu-animation-2;
 }
-
-// div#menu-head {
-//   z-index: 99;
-//   position: fixed;
-//   top: 0;
-//   right: 0;
-//   height: 15vh;
-//   width: 25vw;
-//   @include hero-side-pdd;
-//   @include flex-end;
-
-  
-// }
 
 //------------------------------------------------------------------------------
 // 4.2 MENU PANEL
@@ -126,10 +136,11 @@ nav.hiddenmenu {
     span {
       color: $menu-clr-fnt;
       font-size: 1.5em;
-    }
-    span:hover {
-      @include list-hover;
-      cursor: pointer;
+
+      &:hover {
+        @include list-hover;
+        cursor: pointer;
+      }
     }
   }
 
@@ -183,9 +194,10 @@ nav.hiddenmenu {
         a {
           color: $main-clr-fnt;
           text-decoration: none;
-        }
-        a:hover {
-          color: $menu-clr-fnt;
+
+          &:hover {
+            color: $menu-clr-fnt;
+          }
         }
       }
     }
@@ -232,15 +244,11 @@ section#hero {
     z-index: 2;
     @include hero-settings;
 
-//------------------------------------------------------------------------------
-// 5.2 HEADER & LOGO
-//------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------
+    // 5.2 HEADER & LOGO
+    //------------------------------------------------------------------------------
 
     header#hero_header {
-      @include header;
-      @include hero-side-pdd;
-      @include flex-space;
-
       #logo {
         width: 20%;
         font-size: 3vh;
@@ -273,9 +281,9 @@ section#hero {
       }
     }
 
-//------------------------------------------------------------------------------
-// 5.3 HERO TITLE
-//------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------
+    // 5.3 HERO TITLE
+    //------------------------------------------------------------------------------
 
     div#hero_content_title {
       height: 70vh;
@@ -310,14 +318,14 @@ section#hero {
     }
   }
 
-//------------------------------------------------------------------------------
-// 5.4 BOTTOM ICONS
-//------------------------------------------------------------------------------
+  //------------------------------------------------------------------------------
+  // 5.4 BOTTOM ICONS
+  //------------------------------------------------------------------------------
 
   footer#tech_icons {
     height: 15vh;
     @include hero-side-pdd;
-    @include flex-space;
+    @include flex-between;
 
     i {
       color: $bg-clr-tit;
